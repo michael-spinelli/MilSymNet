@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="MilSymUwpTester.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MilSymUwpTester"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <canvas:CanvasControl x:Name="ccCanvas" Draw="CanvasControl_Draw" ClearColor="CornflowerBlue" PointerReleased="CanvasControl_PointerReleased" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="0,-10,0,10"/>
+
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="20" Margin="14,0,0,226" TextWrapping="Wrap" Text="Affiliation" VerticalAlignment="Bottom" Width="70" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="39" Margin="14,0,0,173" TextWrapping="Wrap" Text="Status" VerticalAlignment="Bottom" Width="70" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="50" Margin="10,0,0,73" TextWrapping="Wrap" Text="Modifier" VerticalAlignment="Bottom" Width="70" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="34" Margin="14,0,0,132" TextWrapping="Wrap" Text="Size" VerticalAlignment="Bottom" Width="70" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="textBlock4" Height="31" Margin="14,0,0,58" TextWrapping="Wrap" Text="KeepUnitRatio" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="97" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Height="16" Margin="14,0,0,38" TextWrapping="Wrap" Text="Labels" VerticalAlignment="Bottom" Width="74" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="cbAffiliation" Grid.ColumnSpan="2" Margin="89,0,0,226" Grid.RowSpan="2" VerticalAlignment="Bottom" Width="41" RenderTransformOrigin="-1.031,0.85" Height="33"/>
+        <ComboBox x:Name="cbStatus" Grid.ColumnSpan="2" Margin="89,0,0,185" Grid.RowSpan="2" VerticalAlignment="Bottom" Width="41" HorizontalAlignment="Left" RenderTransformOrigin="0.851,3.368" Height="33"/>
+        <TextBox x:Name="tbSize" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="25" Margin="89,0,0,139" Grid.RowSpan="2" TextWrapping="Wrap" Text="100" VerticalAlignment="Bottom" Width="40"/>
+        <TextBox x:Name="tbModifier" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="7" Margin="89,0,0,102" Grid.RowSpan="2" TextWrapping="Wrap" Text="-----" VerticalAlignment="Bottom" Width="49"/>
+        <CheckBox x:Name="chkbKeepUnitRatio" Grid.ColumnSpan="2" Content="&#xD;&#xA;" Height="16" Margin="116,0,0,62" Grid.RowSpan="2" VerticalAlignment="Bottom" Width="60"/>
+        <CheckBox x:Name="chkbLabels" Grid.ColumnSpan="2" Content="" Height="4" Margin="116,0,0,27" Grid.RowSpan="2" VerticalAlignment="Bottom" Width="43"/>
+        <ListBox x:Name="lbUnitList" RenderTransformOrigin="0.538,0.488" d:LayoutOverrides="LeftPosition, RightPosition" Grid.ColumnSpan="2" Margin="305,-10,419,0" Grid.RowSpan="2" Height="283" VerticalAlignment="Top" PointerReleased="lbUnitList_PointerReleased" PointerPressed="lbUnitList_PointerPressed" SelectionChanged="lbUnitList_SelectionChanged"/>
+        <ListBox x:Name="lbTGList" Height="283" Grid.ColumnSpan="2" Margin="0,-10,0,0" Grid.RowSpan="2" VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" PointerReleased="lbTGList_PointerReleased" PointerPressed="lbTGList_PointerPressed" SelectionChanged="lbTGList_SelectionChanged"/>
+    </Grid>
+</Page>

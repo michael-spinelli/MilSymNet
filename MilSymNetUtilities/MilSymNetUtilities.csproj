@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="XML\SinglePoint.svg" />
+    <None Remove="XML\SinglePointC.xml" />
+    <None Remove="XML\SymbolConstantsC.xml" />
+    <None Remove="XML\TacticalGraphics.svg" />
+    <None Remove="XML\TacticalGraphics.xml" />
+    <None Remove="XML\UnitConstantsC.xml" />
+    <None Remove="XML\UnitFont.svg" />
+    <None Remove="XML\UnitFontMappingsC.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="XML\SinglePoint.svg" />
+    <EmbeddedResource Include="XML\SinglePointC.xml" />
+    <EmbeddedResource Include="XML\SymbolConstantsC.xml" />
+    <EmbeddedResource Include="XML\TacticalGraphics.svg" />
+    <EmbeddedResource Include="XML\TacticalGraphics.xml" />
+    <EmbeddedResource Include="XML\UnitConstantsC.xml" />
+    <EmbeddedResource Include="XML\UnitFont.svg" />
+    <EmbeddedResource Include="XML\UnitFontMappingsC.xml" />
+  </ItemGroup>
+
+</Project>
